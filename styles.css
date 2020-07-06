@@ -1,0 +1,1046 @@
+body {
+    background-color: #fff;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    padding: 0;
+    margin: -20px 0 0 0;
+    font-family: 'Lato', sans-serif;
+    overflow-x:none;
+}
+
+
+/*ACCEUIL*/
+.container{
+    background-image: url(./public/banner2.jpg);
+    background-size: cover;
+    background-position: top;
+    min-height: 102vh;
+}
+.flex-banner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acceuil-logo{
+    width: 40px;
+    height: 40px;
+    background-image: url(./public/logo.png);
+    background-size: cover;
+}
+
+.logo-main{
+    background-image: url(./public/logo-main.png);
+    background-size: cover;
+    width: 500px;
+    height: 510px;
+}
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .logo-main{
+        width: 300px;
+        height: 310px;
+        margin-top: -200px;
+    }
+  }
+
+
+  /*GALAXY NOTE 9*/
+@media only screen and (min-width: 414px) and (max-width: 767px){
+    .logo-main{
+        width: 300px;
+        height: 310px;
+        margin-top: -200px;
+    }
+    }
+
+    /* redmi note Xioamin 5_7 et samsung note 9*/
+@media only screen and (min-width: 393px) and (max-width: 767px) { 
+    .logo-main{
+        width: 300px;
+        height: 310px;
+        margin-top: -200px;
+    }
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*NAVBAR CSS*/
+.navbar{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    height: 60px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    background-color: rgba(0,0,0,1);
+    top: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid #e9ee00;
+}
+
+.nav-left,.nav-right{
+    display: flex;
+    align-items: center;
+    padding: 7px 20px;
+    width: 50%;
+}
+
+.nav-left li,.nav-right li{
+    margin: 0 15px;
+    cursor: pointer;
+    padding: 7px 15px;
+}
+
+.nav-left li:hover,.nav-right li:hover{
+    color: black;
+    background-color: #e9ee00;
+    border-radius: 25px;
+    padding: 7px 15px;
+}
+
+
+.nav-left{
+    justify-content: flex-start;
+}
+
+.nav-right{
+    justify-content: flex-end;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .navbar{
+        height: 120px;
+        flex-direction: column;
+    }
+    .acceuil-logo{
+        display: none;
+    }
+    .nav-right,.nav-left{
+        width: 100%;
+        justify-content: center;
+        padding: 5px 0!important;
+    }
+
+    .nav-left li,.nav-right li{
+        margin:0;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        padding: 7px 0;
+    }
+
+  }
+
+  /*GALAXY NOTE 9*/
+@media only screen and (min-width: 414px) and (max-width: 767px){
+    .navbar{
+        height: 120px;
+        flex-direction: column;
+    }
+    .acceuil-logo{
+        display: none;
+    }
+    
+    .nav-right,.nav-left{
+        width: 100%;
+        justify-content: center;
+        padding: 5px 0!important;
+    }
+
+    .nav-left li,.nav-right li{
+        margin:0;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        padding: 7px 0;
+    }
+    }
+
+    /* redmi note Xioamin 5_7 et samsung note 9*/
+@media only screen and (min-width: 393px) and (max-width: 767px) { 
+    .navbar{
+        height: 120px;
+        flex-direction: column;
+    }
+    .acceuil-logo{
+        display: none;
+    }
+    .nav-right,.nav-left{
+        width: 100%;
+        justify-content: center;
+        padding: 5px 0!important;
+    }
+
+    .nav-left li,.nav-right li{
+        margin:0;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        padding: 7px 0;
+    }
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FORM INSCRIPTION*/
+
+.subscribe-page{
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./public/banner.jpg);
+    background-size: cover;
+}
+
+.form-container{
+    width: 30%;
+    min-height: 45vh;
+    padding: 35px 10px;
+    margin: auto;
+    height: auto;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+    border: 2px solid #e9ee00;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+
+.subscribe-btn{
+    width: 180px;
+    background-color: #e9ee00;
+    color: #000;
+    padding: 7px 25px;
+    border: 2px solid rgba(0,0,0,0);
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.subscribe-btn:hover{
+    background-color: rgba(0,0,0,0);
+    color: #e9ee00;
+    border: 2px solid #e9ee00;
+}
+
+
+.form-input-div{
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    color: white;
+}
+
+.form-input-div input{
+    border: 2px solid #e9ee00;
+    width: 60%;
+    height: 30px;
+    background-color: #000;
+    color: white;
+    border-radius: 25px;
+    padding-left: 25px ;
+}
+
+
+.form-input-div input:focus,button:focus{
+    outline: none;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+      .form-container{
+          width: 85%;
+          margin-left: 5%;
+      }
+  }
+
+    /*GALAXY NOTE 9*/
+@media only screen and (min-width: 414px) and (max-width: 767px){
+    .form-container{
+        width: 85%;
+        margin-left: 5%;
+    }
+}
+
+      /* redmi note Xioamin 5_7 et samsung note 9*/
+@media only screen and (min-width: 393px) and (max-width: 767px) { 
+    .form-container{
+        width: 85%;
+        margin-left: 5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CARDS PRICE*/
+.tarifs{
+    background-image: url(./public/victor-freitas-WvDYdXDzkhs-unsplash.jpg);
+    background-size: cover;
+    min-height: 102vh;
+}
+
+.h2-title{
+    width: 100%;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0);
+    margin:0;
+    margin-top: 55px;
+    margin-bottom: 25px;
+    padding: 25px 0;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.cards-container{
+    width: 100%;
+    min-height: 90vh;
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 75px;
+}
+
+.price-card-one,.price-card-two{
+    background-color: black;
+    width: 370px;
+    height: 530px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+    border: 2px solid #e9ee00;
+}
+
+.formule-name{
+    background-color: #e9ee00;
+    height: 40px;
+    width: 100%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.select-btn{
+    background-color: #e9ee00;
+    color: black;
+    width: 50%;
+    padding: 7px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    cursor: pointer;
+    border: 2px solid #e9ee00;
+    border-radius: 25px;
+}
+
+.select-btn:hover{
+    background-color: black;
+    border: 2px solid #e9ee00;
+    color: #e9ee00;
+}
+
+.formule-price{
+    border-top: 2px solid #e9ee00;
+    border-bottom: 2px solid #e9ee00;
+    font-size: 40px;
+    padding: 20px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.formule-price span{
+    font-size: 18px;
+
+}
+
+.formule-detail div{
+    margin: 20px 0;
+    padding: 5px 20px;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .h2-title{
+        font-size: 32px;
+    }
+
+  }
+
+  /*GALAXY NOTE 9*/
+@media only screen and (min-width: 414px) and (max-width: 767px){
+    .h2-title{
+        font-size: 32px;
+    }
+    }
+
+    /* redmi note Xioamin 5_7 et samsung note 9*/
+@media only screen and (min-width: 393px) and (max-width: 767px) { 
+    .h2-title{
+        font-size: 32px;
+    }
+   }
+
+
+
+
+
+
+
+
+
+
+/*MON COMPTE*/
+
+.account-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./public/swarzy.jpg);
+    background-size: cover;
+}
+.btn-modif-abonnement{
+    background-color: black;
+    border: none;
+    color: white;
+    height: 40px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+      .resp-btn .btn-select{
+          width: 200px;
+          margin-bottom: 25px;
+      }
+      .account-page{
+          background-image: url(./public/swarzyMobile.jpg);
+      }
+      .account-page .abonnement-infos-container{
+        margin-left: 0;
+    }
+
+  }
+
+    /*GALAXY NOTE 9*/
+@media only screen and (min-width: 414px) and (max-width: 767px){
+    .resp-btn .btn-select{
+        width: 200px;
+        margin-bottom: 25px;
+    }
+    .account-page{
+        background-image: url(./public/swarzyMobile.jpg);
+    }
+    .account-page .abonnement-infos-container{
+        margin-left: 0;
+    }
+
+}
+
+      /* redmi note Xioamin 5_7 et samsung note 9*/
+@media only screen and (min-width: 393px) and (max-width: 767px) { 
+    .resp-btn .btn-select{
+        width: 200px;
+        margin-bottom: 25px;
+    }
+    .account-page{
+        background-image: url(./public/swarzyMobile.jpg);
+    }
+
+    .account-page .abonnement-infos-container{
+        margin-left: 0;
+    }
+}
+
+
+
+
+
+/*ABONNEMENT*/
+.abonnement{
+    width: 100%;
+    min-height: 102vh;
+    background-image: url(./public/swarzy.jpg);
+    background-size: cover;
+    background-position: right;
+}
+.abonnement-infos-container{
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 55px;
+    height: 600px;
+    background-color: rgba(0,0,0,0.8);
+    padding: 2% 5%;
+    border-radius: 25px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 55px;
+}
+
+.formule-actuelle{
+    border-bottom: 2px solid #e9ee00;
+    padding-bottom: 10px;
+}
+
+.btn-abonnement{
+    background-color: #e9ee00;
+    color: black;
+    width: 200px;
+    padding: 7px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-right: 55px;
+    cursor: pointer;
+    border: 2px solid #e9ee00;
+    border-radius: 25px;
+}
+
+.btn-abonnement:hover{
+
+    background-color: black;
+    border: 2px solid #e9ee00;
+    color: #e9ee00;
+}
+
+.paid-month-ligne div{
+    margin-right: 275px;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .abonnement-infos-container{
+        height: 625px;
+        margin-top: 50px;
+    }
+
+    .abonnement{
+        background-image: url(./public/swarzyMobile.jpg);
+    }
+    .paid-month-ligne div{
+        margin-right: 10px;
+    }
+
+  }
+
+    /*GALAXY NOTE 9*/
+@media only screen and (min-width: 414px) and (max-width: 767px){
+    .abonnement-infos-container{
+        height: 625px;
+        margin-top: 50px;
+    }
+    .abonnement{
+        background-image: url(./public/swarzyMobile.jpg);
+    }
+    .paid-month-ligne div{
+        margin-right: 10px;
+    }
+
+}
+
+      /* redmi note Xioamin 5_7 et samsung note 9*/
+@media only screen and (min-width: 393px) and (max-width: 767px) { 
+    .abonnement-infos-container{
+        height: auto;
+        margin-top: 50px;
+    }
+    .abonnement{
+        background-image: url(./public/swarzyMobile.jpg);
+    }
+    .paid-month-ligne div{
+        margin-right: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CONTACT*/
+.contact-page{
+    background-image: url(./public/abs-1850926_1920.jpg);
+    background-position: left;
+    background-size: cover;
+    width: 100%;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 80vh;
+    margin-left: 20%;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 25px;
+    margin-top: 5vh;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); 
+    margin-bottom: 55px;
+    border: 2px solid #e9ee00; 
+}
+
+.contact-form input{
+    width: 60%;
+    height: 35px;
+    border: 2px solid #e9ee00;
+    background-color: #000;
+    margin: 20px 0;
+    border-radius: 25px;
+    color: white;
+    padding-left: 35px;
+}
+
+.contact-form input::placeholder,textarea::placeholder{
+    color: #999;
+    font-family: 'Lato', sans-serif;
+    
+}
+textarea{
+    height: 150px;
+    width: 60%;
+    margin-left: 20%;
+    border: 2px solid #e9ee00;
+    background-color: #000;
+    margin: 10px 0;
+    border-radius: 25px;
+    color: white;
+    padding-left: 35px;
+    padding-top: 5px;
+}
+input:focus,textarea{
+    outline: none;
+}
+
+.btn-select{
+    background-color: #e9ee00;
+    color: black;
+    width: 20%;
+    padding: 7px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    border: 2px solid #e9ee00;
+    border-radius: 25px;
+}
+
+.btn-select:hover{
+    background-color: black;
+    border: 2px solid #e9ee00;
+    color: #e9ee00;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+      .contact-form{
+          width: 90%;
+          margin-left: 5%;
+      }
+      .btn-select{
+          width: 200px;
+      }
+  }
+
+    /*GALAXY NOTE 9*/
+@media only screen and (min-width: 414px) and (max-width: 767px){
+    .contact-form{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .btn-select{
+        width: 200px;
+    }
+}
+
+      /* redmi note Xioamin 5_7 et samsung note 9*/
+@media only screen and (min-width: 393px) and (max-width: 767px) { 
+    .contact-form{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .btn-select{
+        width: 200px;
+    }
+}
+
+
+
+
+
+
+/*FOOTER*/
+.footer{
+    background-color: #000;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #e9ee00;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+    width: 60%;
+    border-top: 2px solid #fff;
+}
+.social-rounded{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid rgba(0,0,0,0);
+}
+
+.social-rounded img{
+    cursor: pointer;
+}
+
+.social-rounded:hover{
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+
+
+
+
+/*INFOS CHANGE PAGE*/
+.change-info-form-container{
+    min-height: 102vh;
+    background-image: url(./public/swarzy.jpg);
+    background-size: cover;
+    background-position: right;
+}
+
+.infos-form-container{
+    width: 60%;
+    margin-left: 20%;
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); 
+    margin-bottom: 55px;
+    margin-top: 55px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.infos-form-container .change-info-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.infos-form-container .change-info-form input{
+    width: 100%;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .change-info-form-container{
+        background-image: url(./public/swarzyMobile.jpg);
+    }
+
+    .change-info-form-container .infos-form-container{
+        width: 90%;
+        margin:35px 0;
+        margin-left: 5%;
+    }
+    .respChange{
+        padding: 0 10px;
+    }
+    .change-info-form-container .infos-form-container .h2-title{
+        text-align: center;
+    }
+
+  }
+
+    /*GALAXY NOTE 9*/
+@media only screen and (min-width: 414px) and (max-width: 767px){
+    .change-info-form-container{
+        background-image: url(./public/swarzyMobile.jpg);
+    }
+    .change-info-form-container .infos-form-container{
+        width: 90%;
+        margin:35px 0;
+        margin-left: 5%;
+    }
+    .respChange{
+        padding: 0 10px;
+    }
+    .change-info-form-container .infos-form-container .h2-title{
+        text-align: center;
+    }
+
+}
+
+      /* redmi note Xioamin 5_7 et samsung note 9*/
+@media only screen and (min-width: 393px) and (max-width: 767px) { 
+    .change-info-form-container{
+        background-image: url(./public/swarzyMobile.jpg);
+    }
+    .change-info-form-container .infos-form-container{
+        width: 90%;
+        margin:35px 0;
+        margin-left: 5%;
+    }
+    .respChange{
+        padding: 0 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .respChange .form-input-div{
+        width: 80%;
+        padding: 15px 25px;
+        
+    }
+    .change-info-form-container .infos-form-container .h2-title{
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+/*PAYMENTS*/
+
+.paiement-bg{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./public/victor-freitas-WvDYdXDzkhs-unsplash.jpg);
+    background-size: cover;
+}
+
+.tabs-payment{
+    height: 80vh;
+    width: 60%;
+    margin:0% 20%;
+    padding: 2%;
+}
+
+.tabs-payment h3{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.tabs div{
+    
+    color: black;
+    width: 33%;
+    padding: 20px 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab-content{
+    background-color: rgba(0,0,0,0.8);
+    padding: 25px 20px;
+}
+.tab-content h3{
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.paiment-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.paiment-form label{
+    text-align: left;
+    width: 60%;
+}
+
+.paiement-input{
+    width: 60%;
+    height: 35px;
+    border: 2px solid #e9ee00;
+    background-color: #000;
+    margin: 10px 0 15px 0;
+    border-radius: 25px;
+    color: white;
+    padding-left: 35px;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .tabs-payment{
+        width: 90%;
+        margin-left: 3%;
+    }
+
+  }
+
+    /*GALAXY NOTE 9*/
+@media only screen and (min-width: 414px) and (max-width: 767px){
+    .tabs-payment{
+        width: 90%;
+        margin-left: 3%;
+    }
+
+}
+
+      /* redmi note Xioamin 5_7 et samsung note 9*/
+@media only screen and (min-width: 393px) and (max-width: 767px) { 
+ 
+    .tabs-payment{
+        width: 90%;
+        margin-left: 3%;
+    }
+}
