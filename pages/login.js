@@ -4,17 +4,17 @@ import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 import api from 'helpers/api';
 import Router from 'next/router';
-import ErrorNotice from 'components/ErrorNotice';
 import { AuthContext } from 'context/auth';
 import Cookies from 'js-cookie';
 import isUserLoggedIn from 'helpers/isUserLoggedIn';
 import redirectTo from 'helpers/redirectTo';
 import Link from 'next/link';
+import cogoToast from 'cogo-toast';
+import toastOptions from 'helpers/toastOptions';
 
 function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [error, setError] = useState();
 
   const { setUserData } = useContext(AuthContext);
 
@@ -34,7 +34,7 @@ function Login() {
 
       Router.push('/compte');
     } catch (err) {
-      if (err.response.data.msg) setError(err.response.data.msg);
+      if (err.response.data.msg) cogoToast.error(err.response.data.msg, toastOptions);
     }
   };
   return (
@@ -47,7 +47,6 @@ function Login() {
 
         <form className='form-container' onSubmit={submit}>
           <h2 className='h2-title'>CONNEXION</h2>
-          {error ? <ErrorNotice message={error} clearError={() => setError()} /> : ''}
 
           <div className='form-input-div'>
             <input

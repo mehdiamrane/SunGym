@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import api from 'helpers/api';
 import Router from 'next/router';
-import ErrorNotice from 'components/ErrorNotice';
 import isUserLoggedIn from 'helpers/isUserLoggedIn';
 import redirectTo from 'helpers/redirectTo';
 import Plans from 'data/plans';
@@ -48,7 +47,6 @@ function Paiement({ token }) {
   const [planId, setPlanId] = useState();
   const [price, setPrice] = useState();
   const [cardHolder, setCardHolder] = useState();
-  const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
 
   const stripe = useStripe();
@@ -127,8 +125,6 @@ function Paiement({ token }) {
   const submitBillingInfo = async (e) => {
     e.preventDefault();
 
-    setError();
-
     try {
       const data = { nom, prenom, adresse, ville, codePostal };
       const apiRes = await api.post('account/facturation', data, {
@@ -140,14 +136,12 @@ function Paiement({ token }) {
         setLastActive(2);
       }
     } catch (err) {
-      if (err.response.data.msg) setError(err.response.data.msg);
+      if (err.response.data.msg) cogoToast.error(err.response.data.msg, toastOptions);
     }
   };
 
   const submitPlan = async (e) => {
     e.preventDefault();
-
-    setError();
 
     try {
       const data = { planId };
@@ -162,7 +156,7 @@ function Paiement({ token }) {
         setLastActive(3);
       }
     } catch (err) {
-      if (err.response.data.msg) setError(err.response.data.msg);
+      if (err.response.data.msg) cogoToast.error(err.response.data.msg, toastOptions);
     }
   };
 
@@ -182,7 +176,6 @@ function Paiement({ token }) {
             />
             <div className='tab-content'>
               <h3>Informations de facturation</h3>
-              {error ? <ErrorNotice message={error} clearError={() => setError()} /> : ''}
               <form className='paiment-form' onSubmit={submitBillingInfo}>
                 <label htmlFor='prenom'>Prénom:</label>
                 <input
@@ -268,7 +261,6 @@ function Paiement({ token }) {
             />
             <div className='tab-content'>
               <h3>Mon Abonnement</h3>
-              {error ? <ErrorNotice message={error} clearError={() => setError()} /> : ''}
               <form className='paiment-form' onSubmit={submitPlan}>
                 <label htmlFor='abonnement'>Choisir un abonnement:</label>
                 <select
@@ -312,7 +304,6 @@ function Paiement({ token }) {
             />
             <div className='tab-content'>
               <h3>Moyen de Paiement</h3>
-              {error ? <ErrorNotice message={error} clearError={() => setError()} /> : ''}
               <form className='paiment-form' onSubmit={handlePay}>
                 <label>Nom du Titulaire de la carte :</label>
                 <input

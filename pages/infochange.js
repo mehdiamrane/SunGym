@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 import api from 'helpers/api';
-import ErrorNotice from 'components/ErrorNotice';
 import isUserLoggedIn from 'helpers/isUserLoggedIn';
 import cogoToast from 'cogo-toast';
 import toastOptions from 'helpers/toastOptions';
@@ -15,7 +14,6 @@ function Infochange({ token }) {
   const [adresse, setAdresse] = useState();
   const [codePostal, setCodePostal] = useState();
   const [ville, setVille] = useState();
-  const [error, setError] = useState();
 
   useEffect(() => {
     const getUserInfo = async () => {
@@ -35,8 +33,6 @@ function Infochange({ token }) {
   const submitInfo = async (e) => {
     e.preventDefault();
 
-    setError();
-
     try {
       const data = { email, nom, prenom, adresse, ville, codePostal };
       const apiRes = await api.post('account/informations', data, {
@@ -44,7 +40,7 @@ function Infochange({ token }) {
       });
       if (apiRes) cogoToast.success('Les informations ont bien été enregistrées', toastOptions);
     } catch (err) {
-      if (err.response.data.msg) setError(err.response.data.msg);
+      if (err.response.data.msg) cogoToast.error(err.response.data.msg, toastOptions);
     }
   };
 
@@ -57,7 +53,6 @@ function Infochange({ token }) {
       <div className='infos-form-container'>
         <form className='change-info-form' onSubmit={submitInfo}>
           <h2 className='h2-title'>MODIFIER MES INFORMATIONS</h2>
-          {error ? <ErrorNotice message={error} clearError={() => setError()} /> : ''}
 
           <div
             className='respChange'

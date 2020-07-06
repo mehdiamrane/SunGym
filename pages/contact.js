@@ -17,15 +17,15 @@ function Contact() {
 
     try {
       const data = { email, nom, message, tel };
-      await api.post('email', data);
+      await api.post('mail', data);
 
       cogoToast.success('Message envoyé avec succès', toastOptions);
-      setEmail();
-      setNom();
-      setTel();
-      setMessage();
+      setEmail('');
+      setNom('');
+      setTel('');
+      setMessage('');
     } catch (err) {
-      if (err.response.data.msg) setError(err.response.data.msg);
+      if (err.response.data.msg) cogoToast.error(err.response.data.msg, toastOptions);
     }
   };
   return (
@@ -42,6 +42,7 @@ function Contact() {
             id='nom'
             name='nom'
             placeholder='Votre nom'
+            value={nom || ''}
             required
             onChange={(e) => setNom(e.target.value)}
           />
@@ -51,12 +52,14 @@ function Contact() {
             name='email'
             placeholder='Votre email'
             required
+            value={email || ''}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type='number'
             id='tel'
             name='tel'
+            value={tel || ''}
             placeholder='Votre numéro de téléphone'
             required
             onChange={(e) => setTel(e.target.value)}
@@ -65,6 +68,7 @@ function Contact() {
             type='text'
             id='message'
             name='message'
+            value={message || ''}
             placeholder='Votre message'
             required
             onChange={(e) => setMessage(e.target.value)}

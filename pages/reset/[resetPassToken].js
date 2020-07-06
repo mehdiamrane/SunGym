@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Navbar from 'components/Navbar';
-import ErrorNotice from 'components/ErrorNotice';
 import api from 'helpers/api';
 import Router from 'next/router';
 import redirectTo from 'helpers/redirectTo';
@@ -11,7 +10,10 @@ import toastOptions from 'helpers/toastOptions';
 export default function ResetPage({ canReset, email, errorMessage }) {
   const [password, setPassword] = useState();
   const [passwordCheck, setPasswordCheck] = useState();
-  const [error, setError] = useState(errorMessage);
+
+  if (errorMessage) {
+    cogoToast.error(errorMessage, toastOptions);
+  }
 
   const submit = async (e) => {
     e.preventDefault();
@@ -26,7 +28,7 @@ export default function ResetPage({ canReset, email, errorMessage }) {
           Router.push('/login');
         });
     } catch (err) {
-      if (err.response.data.msg) setError(err.response.data.msg);
+      if (err.response.data.msg) cogoToast.error(err.response.data.msg, toastOptions);
     }
   };
 
@@ -41,7 +43,6 @@ export default function ResetPage({ canReset, email, errorMessage }) {
         <form className='form-container' onSubmit={submit}>
           <h2 className='h2-title'>RÉINITIALISER</h2>
           <p>Entrez votre nouveau mot de passe</p>
-          {error ? <ErrorNotice message={error} clearError={() => setError()} /> : ''}
 
           <div className='form-input-div'>
             <input

@@ -4,11 +4,12 @@ import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 import Router from 'next/router';
 import api from 'helpers/api';
-import ErrorNotice from 'components/ErrorNotice';
 import { AuthContext } from 'context/auth';
 import Cookies from 'js-cookie';
 import isUserLoggedIn from 'helpers/isUserLoggedIn';
 import redirectTo from 'helpers/redirectTo';
+import cogoToast from 'cogo-toast';
+import toastOptions from 'helpers/toastOptions';
 
 function Register() {
   const [prenom, setPrenom] = useState();
@@ -16,7 +17,6 @@ function Register() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [passwordCheck, setPasswordCheck] = useState();
-  const [error, setError] = useState();
 
   const { setUserData } = useContext(AuthContext);
 
@@ -37,7 +37,7 @@ function Register() {
 
       Router.push('/tarifs');
     } catch (err) {
-      if (err.response.data.msg) setError(err.response.data.msg);
+      if (err.response.data.msg) cogoToast.error(err.response.data.msg, toastOptions);
     }
   };
   return (
@@ -50,7 +50,6 @@ function Register() {
 
         <form className='form-container' onSubmit={submit}>
           <h2 className='h2-title'>Inscription</h2>
-          {error ? <ErrorNotice message={error} clearError={() => setError()} /> : ''}
           <div className='form-input-div'>
             <input
               type='text'

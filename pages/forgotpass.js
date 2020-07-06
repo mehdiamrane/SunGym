@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Navbar from 'components/Navbar';
-import ErrorNotice from 'components/ErrorNotice';
 import api from 'helpers/api';
 import cogoToast from 'cogo-toast';
 import toastOptions from 'helpers/toastOptions';
 
 export default function ForgotPass() {
   const [email, setEmail] = useState();
-  const [error, setError] = useState();
 
   const submit = async (e) => {
     e.preventDefault();
@@ -22,7 +20,7 @@ export default function ForgotPass() {
         toastOptions
       );
     } catch (err) {
-      if (err.response.data.msg) setError(err.response.data.msg);
+      if (err.response.data.msg) cogoToast.error(err.response.data.msg, toastOptions);
     }
   };
 
@@ -37,8 +35,6 @@ export default function ForgotPass() {
         <form className='form-container' onSubmit={submit}>
           <h2 className='h2-title'>MOT DE PASSE OUBLIÉ</h2>
           <p>Entrez votre email pour réinitialiser le mot de passe</p>
-          {error ? <ErrorNotice message={error} clearError={() => setError()} /> : ''}
-
           <div className='form-input-div'>
             <input
               type='email'
