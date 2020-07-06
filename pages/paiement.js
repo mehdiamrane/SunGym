@@ -17,19 +17,19 @@ const TabsMenu = ({ activeTab, lastActive, switchTab }) => {
     <div className='tabs'>
       <div
         style={{ backgroundColor: activeTab === 1 ? 'yellow' : 'grey' }}
-        onClick={() => (lastActive <= 1 ? switchTab(1) : null)}
+        onClick={() => (lastActive >= 1 ? switchTab(1) : null)}
       >
         Etape 1
       </div>
       <div
         style={{ backgroundColor: activeTab === 2 ? 'yellow' : 'grey' }}
-        onClick={() => (lastActive <= 2 ? switchTab(2) : null)}
+        onClick={() => (lastActive >= 2 ? switchTab(2) : null)}
       >
         Etape 2
       </div>
       <div
         style={{ backgroundColor: activeTab === 3 ? 'yellow' : 'grey' }}
-        onClick={() => (lastActive <= 3 ? switchTab(3) : null)}
+        onClick={() => (lastActive >= 3 ? switchTab(3) : null)}
       >
         Etape 3
       </div>
@@ -324,7 +324,10 @@ function Paiement({ token }) {
                 />
 
                 <label htmlFor='stripe-element'>Carte de paiement :</label>
-                <CardElement />
+                <div className='paiement-input'>
+                  <CardElement />
+                </div>
+
                 <p>Paiement sécurisé par Stripe</p>
                 <input
                   type='submit'
@@ -353,10 +356,10 @@ Paiement.getInitialProps = async (ctx) => {
     });
 
     // Redirige vers /compte si abonnement déja actif
-    if (user.planStatus && user.planStatus == 'Actif') {
-      redirectTo(ctx, '/compte');
-      return { isLoggedIn: isLoggedIn };
-    }
+    // if (user.planStatus && user.planStatus == 'Actif') {
+    //   redirectTo(ctx, '/compte');
+    //   return { isLoggedIn: isLoggedIn };
+    // }
   }
 
   // Redirige vers /register si pas connecté

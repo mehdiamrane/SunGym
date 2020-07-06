@@ -28,7 +28,7 @@ const CreditCard = (props) => {
   );
 };
 
-function Abonnement({ token, subs, invoices }) {
+function Abonnement({ token, subs, user, invoices }) {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -126,7 +126,9 @@ function Abonnement({ token, subs, invoices }) {
             <div style={{ marginBottom: 40 }} className='formule-actuelle'>
               FORMULE ACTUELLE
             </div>
-            <h3>Formule {subs[0].plan.nickname}</h3>
+            <h3>
+              Formule {subs[0].plan.nickname} - {user.planStatus || 'N/A'}
+            </h3>
             <div>
               {subs[0].plan.amount / 100}€ / {subs[0].plan.interval_count}{' '}
               {subs[0].plan.interval === 'day' ? 'jours' : 'mois'}
@@ -161,15 +163,17 @@ function Abonnement({ token, subs, invoices }) {
             ) : (
               <p>Aucun moyen de paiement défini</p>
             )}
-            <button type='submit' hidden={newDefaultCard === defaultCard} className='btn-select'>
-              Définir carte par défaut
+            <button type='submit' className='btn-select' hidden={newDefaultCard === defaultCard}>
+              Définir comme carte par défaut
             </button>
           </form>
           <button onClick={createSetupIntent} hidden={setupIntent} className='btn-select'>
             Ajouter un nouveau moyen de paiement
           </button>
           <form onSubmit={handleSubmit} hidden={!setupIntent || setupIntent.status === 'succeeded'}>
-            <CardElement />
+            <div className='paiement-input'>
+              <CardElement />
+            </div>
             <button type='submit' className='btn-select'>
               Ajouter la carte
             </button>
@@ -225,12 +229,16 @@ Abonnement.getInitialProps = async (ctx) => {
     const subs = await api.get('subscriptions', {
       headers: { 'x-auth-token': token },
     });
+    // GET USER DATA FROM API
+    const user = await api.get('account', {
+      headers: { 'x-auth-token': token },
+    });
     // GET INVOICES FROM API
     const invoices = await api.get('subscriptions/invoices', {
       headers: { 'x-auth-token': token },
     });
     // Must return an object
-    return { token: token, subs: subs.data, invoices: invoices.data };
+    return { token: token, subs: subs.data, user: user.data, invoices: invoices.data };
   }
   if (!isLoggedIn) return { isLoggedIn: isLoggedIn };
 };
