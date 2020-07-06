@@ -90,7 +90,7 @@ function Payments() {
             <div className='tab-content'>
               <h3>Mon Abonnement</h3>
               <form className='paiment-form'>
-                <lable>Choissez un Abonnement</lable>
+                <label>Choissez un Abonnement</label>
                 <select className='paiement-input'>
                   <option>Après-Midi, 29.90$</option>
                   <option>Journée, 39.90$</option>
