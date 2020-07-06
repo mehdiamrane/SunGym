@@ -24,8 +24,8 @@ function Tarifs() {
             <div className='detail-ligne'>Accès illimité</div>
             <div className='detail-ligne'></div>
           </div>
-          <Link href='/payments'>
-            <div className='select-btn'>JE M'INSCRIS</div>
+          <Link href='/paiement' passHref>
+            <a className='select-btn'>JE M'INSCRIS</a>
           </Link>
         </div>
 
@@ -40,8 +40,8 @@ function Tarifs() {
             <div className='detail-ligne'>Accès illimité</div>
             <div className='detail-ligne'></div>
           </div>
-          <Link href='/payments'>
-            <div className='select-btn'>JE M'INSCRIS</div>
+          <Link href='/paiement' passHref>
+            <a className='select-btn'>JE M'INSCRIS</a>
           </Link>
         </div>
 
@@ -56,8 +56,8 @@ function Tarifs() {
             <div className='detail-ligne'>Accès illimité</div>
             <div className='detail-ligne'></div>
           </div>
-          <Link href='/payments'>
-            <div className='select-btn'>JE M'INSCRIS</div>
+          <Link href='/paiement' passHref>
+            <a className='select-btn'>JE M'INSCRIS</a>
           </Link>
         </div>
 
@@ -72,8 +72,8 @@ function Tarifs() {
             <div className='detail-ligne'>Uniquement Samedi et Dimanche</div>
             <div className='detail-ligne'></div>
           </div>
-          <Link href='/payments'>
-            <div className='select-btn'>JE M'INSCRIS</div>
+          <Link href='/paiement' passHref>
+            <a className='select-btn'>JE M'INSCRIS</a>
           </Link>
         </div>
 
@@ -89,8 +89,8 @@ function Tarifs() {
             <div className='detail-ligne'>Uniquement sous présentation d'une carte étudiante</div>
             <div className='detail-ligne'>Pas de paiement en ligne</div>
           </div>
-          <Link href='/payments'>
-            <div className='select-btn'>JE M'INSCRIS</div>
+          <Link href='/paiement' passHref>
+            <a className='select-btn'>JE M'INSCRIS</a>
           </Link>
         </div>
 
@@ -105,8 +105,8 @@ function Tarifs() {
             <div className='detail-ligne'>Uniquement Septembre à fin Juin</div>
             <div className='detail-ligne'></div>
           </div>
-          <Link href='/payments'>
-            <div className='select-btn'>JE M'INSCRIS</div>
+          <Link href='/paiement' passHref>
+            <a className='select-btn'>JE M'INSCRIS</a>
           </Link>
         </div>
       </div>
