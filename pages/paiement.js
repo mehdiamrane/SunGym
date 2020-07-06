@@ -350,7 +350,7 @@ Paiement.getInitialProps = async (ctx) => {
     });
 
     // Redirige vers /compte si abonnement déja actif
-    if (user.planStatus && user.planStatus == 'Actif') {
+    if (user.data.planStatus && user.data.planStatus == 'Actif') {
       redirectTo(ctx, '/compte');
       return { isLoggedIn: isLoggedIn };
     }
