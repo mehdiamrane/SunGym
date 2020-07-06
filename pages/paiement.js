@@ -46,6 +46,7 @@ function Paiement({ token }) {
   const [codePostal, setCodePostal] = useState();
   const [ville, setVille] = useState();
   const [planId, setPlanId] = useState();
+  const [price, setPrice] = useState();
   const [cardHolder, setCardHolder] = useState();
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
@@ -155,6 +156,8 @@ function Paiement({ token }) {
       });
       if (apiRes) {
         cogoToast.success('Plan choisi avec succès!', toastOptions);
+        const selectedPlan = Plans.find((plan) => plan.planId === planId);
+        setPrice(selectedPlan.prix);
         setActiveTab(3);
         setLastActive(3);
       }
@@ -331,7 +334,7 @@ function Paiement({ token }) {
                 <p>Paiement sécurisé par Stripe</p>
                 <input
                   type='submit'
-                  value='Valider et payer xx€'
+                  value={`Valider et payer ${price}`}
                   className='btn-select'
                   disabled={loading}
                 />
