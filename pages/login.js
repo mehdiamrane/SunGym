@@ -8,7 +8,7 @@ function Login() {
     <div>
       <div className='subscribe-page'>
         <Head>
-          <title>Se connecter ! - Sun Gym</title>
+          <title>Se connecter - Sun Gym</title>
         </Head>
         <Navbar />
 
