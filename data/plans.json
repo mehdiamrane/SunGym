@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "planId": "price_1H0RUOAIdmFzhJyA5ZohRTMC",
+    "titre": "14H/17H",
+    "prix": "29,90€",
+    "periode": "28 jours",
+    "montant": "2990"
+  },
+  {
+    "id": 2,
+    "planId": "price_1H0RUPAIdmFzhJyAF81vYe0Q",
+    "titre": "7H/17H",
+    "prix": "39,90€",
+    "periode": "28 jours",
+    "montant": "3990"
+  },
+  {
+    "id": 3,
+    "planId": "price_1H0RUOAIdmFzhJyA4o49y4Iq",
+    "titre": "7H/22H",
+    "prix": "54,90€",
+    "periode": "28 jours",
+    "montant": "5490"
+  },
+  {
+    "id": 4,
+    "planId": "price_1H0RUOAIdmFzhJyAYSLxp1dO",
+    "titre": "Samedi/Dimanche",
+    "prix": "29,90€",
+    "periode": "28 jours",
+    "montant": "2990"
+  },
+  {
+    "id": 5,
+    "planId": "price_1H0RUPAIdmFzhJyATtqh78bK",
+    "titre": "Année Scolaire",
+    "prix": "49,90€",
+    "periode": "28 jours",
+    "montant": "4990"
+  },
+  {
+    "id": 6,
+    "planId": "price_1H0RUOAIdmFzhJyAzyRGvPtK",
+    "titre": "Etudiants",
+    "prix": "39,90€",
+    "periode": "28 jours",
+    "montant": "3990"
+  }
+]
