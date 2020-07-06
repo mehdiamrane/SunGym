@@ -1,10 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Link from 'next/link';
-import Footer from '../components/Footer';
+import Navbar from 'components/Navbar';
+import Footer from 'components/Footer';
+import api from 'helpers/api';
+import ErrorNotice from 'components/ErrorNotice';
+import isUserLoggedIn from 'helpers/isUserLoggedIn';
+import cogoToast from 'cogo-toast';
+import toastOptions from 'helpers/toastOptions';
 
-function Infochange() {
+function Infochange({ token }) {
+  const [nom, setNom] = useState();
+  const [email, setEmail] = useState();
+  const [prenom, setPrenom] = useState();
+  const [adresse, setAdresse] = useState();
+  const [codePostal, setCodePostal] = useState();
+  const [ville, setVille] = useState();
+  const [error, setError] = useState();
+
+  useEffect(() => {
+    const getUserInfo = async () => {
+      const apiRes = await api.get('account/', {
+        headers: { 'x-auth-token': token },
+      });
+      setEmail(apiRes.data.email);
+      setNom(apiRes.data.nom);
+      setPrenom(apiRes.data.prenom);
+      setAdresse(apiRes.data.adresse);
+      setCodePostal(apiRes.data.codePostal);
+      setVille(apiRes.data.ville);
+    };
+    getUserInfo();
+  }, []);
+
+  const submitInfo = async (e) => {
+    e.preventDefault();
+
+    setError();
+
+    try {
+      const data = { email, nom, prenom, adresse, ville, codePostal };
+      const apiRes = await api.post('account/informations', data, {
+        headers: { 'x-auth-token': token },
+      });
+      if (apiRes) cogoToast.success('Les informations ont bien été enregistrées', toastOptions);
+    } catch (err) {
+      if (err.response.data.msg) setError(err.response.data.msg);
+    }
+  };
+
   return (
     <div className='change-info-form-container'>
       <Head>
@@ -12,18 +55,35 @@ function Infochange() {
       </Head>
       <Navbar />
       <div className='infos-form-container'>
-        <form className='change-info-form'>
+        <form className='change-info-form' onSubmit={submitInfo}>
           <h2 className='h2-title'>MODIFIER MES INFORMATIONS</h2>
+          {error ? <ErrorNotice message={error} clearError={() => setError()} /> : ''}
 
           <div
             className='respChange'
             style={{ display: 'flex', justifyContent: 'flex-start', width: '100%' }}
           >
             <div className='form-input-div'>
-              <input type='text' name='nom' placeholder='Nom'></input>
+              <input
+                type='text'
+                id='prenom'
+                name='prenom'
+                value={prenom || ''}
+                placeholder='Prénom'
+                required
+                onChange={(e) => setPrenom(e.target.value)}
+              />
             </div>
             <div className='form-input-div'>
-              <input type='text' name='prenom' placeholder='Prénom'></input>
+              <input
+                type='text'
+                id='nom'
+                name='nom'
+                value={nom || ''}
+                placeholder='Nom'
+                required
+                onChange={(e) => setNom(e.target.value)}
+              />
             </div>
           </div>
 
@@ -32,7 +92,15 @@ function Infochange() {
             style={{ display: 'flex', justifyContent: 'flex-start', width: '100%' }}
           >
             <div className='form-input-div'>
-              <input type='email' name='email' placeholder='Email'></input>
+              <input
+                type='email'
+                id='email'
+                name='email'
+                value={email || ''}
+                placeholder='Email'
+                required
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
           </div>
 
@@ -41,24 +109,57 @@ function Infochange() {
             style={{ display: 'flex', justifyContent: 'flex-start', width: '100%' }}
           >
             <div className='form-input-div'>
-              <input type='text' name='rue' placeholder='Nom et Numéro de rue'></input>
+              <input
+                type='text'
+                id='adresse'
+                name='adresse'
+                value={adresse || ''}
+                placeholder='Adresse'
+                required
+                onChange={(e) => setAdresse(e.target.value)}
+              />
             </div>
             <div className='form-input-div'>
-              <input type='text' name='cp' placeholder='Code Postal'></input>
+              <input
+                type='number'
+                id='code-postal'
+                name='code-postal'
+                value={codePostal || ''}
+                placeholder='Code Postal'
+                required
+                maxLength={5}
+                onChange={(e) => setCodePostal(e.target.value)}
+              />
             </div>
 
             <div className='form-input-div'>
-              <input type='text' name='ville' placeholder='Ville'></input>
+              <input
+                type='text'
+                id='ville'
+                name='ville'
+                value={ville || ''}
+                placeholder='Ville'
+                required
+                onChange={(e) => setVille(e.target.value)}
+              />
             </div>
           </div>
+          <input className='btn-select' type='submit' value='Valider' />
         </form>
-        <Link href='/account'>
-          <button className='btn-select'>MODIFIER</button>
-        </Link>
       </div>
       <Footer />
     </div>
   );
 }
+
+// EXECUTES BEFORE PAGE LOADS
+Infochange.getInitialProps = async (ctx) => {
+  // CHECKS IF USER IS LOGGED IN
+  const { token, isLoggedIn } = await isUserLoggedIn(ctx, '/login');
+
+  // Must return an object
+  if (isLoggedIn) return { token: token };
+  if (!isLoggedIn) return { isLoggedIn: isLoggedIn };
+};
 
 export default Infochange;
