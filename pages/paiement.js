@@ -237,7 +237,7 @@ function Paiement({ token }) {
                   maxLength={5}
                   onChange={(e) => setCodePostal(e.target.value)}
                 />
-                <input type='submit' className='btn-select' value='Valider' />
+                <input type='submit' className='btn-select' value='Valider'/>
               </form>
             </div>
           </div>
@@ -319,7 +319,23 @@ function Paiement({ token }) {
 
                 <label htmlFor='stripe-element'>Carte de paiement :</label>
                 <div className='paiement-input'>
-                  <CardElement />
+                  <CardElement 
+                    options={{
+                  style: {
+                    base: {
+                      marginTop:'30px',
+                      fontSize: '16px',
+                      color: '#fff',
+                      '::placeholder': {
+                        color: '#aab7c4',
+                      },
+                    },
+                    invalid: {
+                      color: '#9e2146',
+                    },
+                  },
+                }}
+                  />
                 </div>
 
                 <p>Paiement sécurisé par Stripe</p>

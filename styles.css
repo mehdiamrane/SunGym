@@ -12,7 +12,7 @@ body {
 
 /*ACCEUIL*/
 .container{
-    background-image: url(./public/banner2.jpg);
+    background-image: url(./public/banner.jpg);
     background-size: cover;
     background-position: top;
     min-height: 102vh;
@@ -38,6 +38,28 @@ body {
     width: 500px;
     height: 510px;
 }
+.coatch-card-zone{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 35px 0 0 0;
+    background-color: #000;
+}
+
+.coatch-card{
+    width: 100%;
+    height: 480px;
+}
+.card-front img{
+    width: 100%;
+    height: 480px;
+}
+
+
+
+
+
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
@@ -116,7 +138,7 @@ body {
 .nav-left li:hover,.nav-right li:hover{
     color: black;
     background-color: #e9ee00;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     padding: 7px 15px;
 }
 
@@ -247,8 +269,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border-radius: 25px;
-    border: 2px solid #e9ee00;
+    /* border-radius: 25px; */
     margin-top: 55px;
     margin-bottom: 55px;
 }
@@ -264,7 +285,7 @@ body {
     margin-top: 25px;
     margin-bottom: 25px;
     cursor: pointer;
-    border-radius: 25px;
+    /* border-radius: 25px; */
 }
 
 .subscribe-btn:hover{
@@ -277,7 +298,7 @@ body {
 .form-input-div{
     width: 100%;
     height: auto;
-    padding: 25px;
+    padding: 15px 25px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,7 +313,7 @@ body {
     height: 30px;
     background-color: #000;
     color: white;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     padding-left: 25px ;
 }
 
@@ -300,6 +321,12 @@ body {
 .form-input-div input:focus,button:focus{
     outline: none;
 }
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: #e9ee00;
+}
+
 
 /* ----------- iPhone X ----------- */
 
@@ -354,7 +381,7 @@ body {
     justify-content: center;
     background-color: rgba(0,0,0,0);
     margin:0;
-    margin-top: 55px;
+    margin-top: 25px;
     margin-bottom: 25px;
     padding: 25px 0;
     text-transform: uppercase;
@@ -399,7 +426,7 @@ body {
 
 .select-btn{
     background-color: #e9ee00;
-    color: black;
+    color: black!important;
     width: 50%;
     padding: 7px 25px;
     display: flex;
@@ -408,13 +435,13 @@ body {
     margin-bottom: 25px;
     cursor: pointer;
     border: 2px solid #e9ee00;
-    border-radius: 25px;
+    /* border-radius: 25px; */
 }
 
 .select-btn:hover{
     background-color: black;
     border: 2px solid #e9ee00;
-    color: #e9ee00;
+    color: #e9ee00!important;
 }
 
 .formule-price{
@@ -492,7 +519,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border-radius: 25px;
+    /* border-radius: 25px; */
 }
 
 /* ----------- iPhone X ----------- */
@@ -511,6 +538,7 @@ body {
       }
       .account-page .abonnement-infos-container{
         margin-left: 0;
+        height: auto;
     }
 
   }
@@ -550,6 +578,9 @@ body {
 
 
 /*ABONNEMENT*/
+.paiement-imput{
+    color: white!important;
+}
 .abonnement{
     width: 100%;
     min-height: 102vh;
@@ -561,10 +592,10 @@ body {
     width: 80%;
     margin-left: 5%;
     margin-top: 55px;
-    height: 600px;
+    height: auto;
     background-color: rgba(0,0,0,0.8);
     padding: 2% 5%;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     margin-bottom: 55px;
 }
@@ -586,7 +617,7 @@ body {
     margin-right: 55px;
     cursor: pointer;
     border: 2px solid #e9ee00;
-    border-radius: 25px;
+    /* border-radius: 25px; */
 }
 
 .btn-abonnement:hover{
@@ -674,11 +705,13 @@ body {
 
 /*CONTACT*/
 .contact-page{
-    background-image: url(./public/abs-1850926_1920.jpg);
-    background-position: left;
+    background-image: url(./public/man3.jpg);
+    background-position: right;
     background-size: cover;
     width: 100%;
 }
+
+
 .contact-form{
     display: flex;
     flex-direction: column;
@@ -688,11 +721,22 @@ body {
     height: 80vh;
     margin-left: 20%;
     background-color: rgba(0,0,0,0.8);
-    border-radius: 25px;
+    /* border-radius: 25px; */
     margin-top: 5vh;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); 
     margin-bottom: 55px;
-    border: 2px solid #e9ee00; 
+}
+
+.contact-zone .contact-form{
+    margin-left: 1%;
+    background-color:  rgba(0, 0, 0, 0);
+}
+
+select:focus{
+    outline: none;
+}
+.ElementsApp .InputElement{
+    color: white;
 }
 
 .contact-form input{
@@ -701,7 +745,7 @@ body {
     border: 2px solid #e9ee00;
     background-color: #000;
     margin: 20px 0;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     color: white;
     padding-left: 35px;
 }
@@ -718,7 +762,7 @@ textarea{
     border: 2px solid #e9ee00;
     background-color: #000;
     margin: 10px 0;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     color: white;
     padding-left: 35px;
     padding-top: 5px;
@@ -739,7 +783,7 @@ input:focus,textarea{
     margin-bottom: 25px;
     cursor: pointer;
     border: 2px solid #e9ee00;
-    border-radius: 25px;
+    /* border-radius: 25px; */
 }
 
 .btn-select:hover{
@@ -847,7 +891,7 @@ input:focus,textarea{
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); 
     margin-bottom: 55px;
     margin-top: 55px;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1006,11 +1050,16 @@ input:focus,textarea{
     width: 60%;
     height: 35px;
     border: 2px solid #e9ee00;
-    background-color: #000;
+    background-color:  rgba(0, 0, 0, 0);
     margin: 10px 0 15px 0;
-    border-radius: 25px;
-    color: white;
+    /* border-radius: 25px; */
+    color: white!important;
     padding-left: 35px;
+}
+
+.CardField{
+    margin-top: 4px;
+    height: 35px;
 }
 
 /* ----------- iPhone X ----------- */

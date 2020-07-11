@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Navbar from 'components/Navbar';
+import Footer from 'components/Footer';
 import api from 'helpers/api';
 import cogoToast from 'cogo-toast';
 import toastOptions from 'helpers/toastOptions';
@@ -33,7 +34,7 @@ export default function ForgotPass() {
         <Navbar />
 
         <form className='form-container' onSubmit={submit}>
-          <h2 className='h2-title'>MOT DE PASSE OUBLIÉ</h2>
+          <h2 className='h2-title' style={{textAlign:'center'}}>CHANGER MON MOT DE PASSE</h2>
           <p>Entrez votre email pour réinitialiser le mot de passe</p>
           <div className='form-input-div'>
             <input

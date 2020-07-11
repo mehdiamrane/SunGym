@@ -101,7 +101,7 @@ function Register() {
               type='password'
               id='password2'
               name='password2'
-              placeholder='Mot de passe'
+              placeholder='Confirmer le Mot de passe'
               required
               onChange={(e) => setPasswordCheck(e.target.value)}
             />

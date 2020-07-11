@@ -70,7 +70,7 @@ function Login() {
             />
           </div>
 
-          <Link href='/forgotpass' passHref>
+          <Link className='forgot-pw' href='/forgotpass' passHref>
             <a>Mot de passe oublié ?</a>
           </Link>
 

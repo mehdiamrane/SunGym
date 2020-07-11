@@ -74,7 +74,7 @@ function Contact() {
             onChange={(e) => setMessage(e.target.value)}
           />
 
-          <input type='submit' value='ENVOYER' className='btn-select' />
+          <button type='submit' value='ENVOYER' className='btn-select' >ENVOYER</button>
         </form>
       </div>
       <Footer />

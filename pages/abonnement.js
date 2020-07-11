@@ -148,10 +148,10 @@ function Abonnement({ token, subs, user, invoices }) {
 
         <div style={{ marginBottom: 40 }}>
           <div className='formule-actuelle'>MOYENS DE PAIEMENT</div>
-          <form onSubmit={handleDefaultCard}>
+          <form  style={{display:'flex', flexDirection:'column',marginTop:15}} onSubmit={handleDefaultCard}>
             {wallet.length >= 1 ? (
               wallet.map((paymentSource) => (
-                <CreditCard
+                <CreditCard style={{ marginBottom: 10, marginTop: 10 }}
                   key={paymentSource.id}
                   pm={paymentSource.id}
                   card={paymentSource.card}
@@ -172,7 +172,23 @@ function Abonnement({ token, subs, user, invoices }) {
           </button>
           <form onSubmit={handleSubmit} hidden={!setupIntent || setupIntent.status === 'succeeded'}>
             <div className='paiement-input'>
-              <CardElement />
+              <CardElement 
+                options={{
+                  style: {
+                    base: {
+                      marginTop:'30px',
+                      fontSize: '16px',
+                      color: '#fff',
+                      '::placeholder': {
+                        color: '#aab7c4',
+                      },
+                    },
+                    invalid: {
+                      color: '#9e2146',
+                    },
+                  },
+                }}
+              />
             </div>
             <button type='submit' className='btn-select'>
               Ajouter la carte
@@ -182,8 +198,10 @@ function Abonnement({ token, subs, user, invoices }) {
 
         <div>
           <div className='formule-actuelle'>HISTORIQUE DE FACTURATION</div>
+          <div style={{display:'flex', flexDirection:'column',marginTop:15}}>
+
           {invoices.map((invoice) => (
-            <a
+            <a 
               style={{ marginBottom: 10, marginTop: 10 }}
               className='paid-month-ligne'
               key={invoice.id}
@@ -194,6 +212,7 @@ function Abonnement({ token, subs, user, invoices }) {
             </a>
           ))}
           {invoices.length < 1 ? <p>Aucune facture trouvée</p> : ''}
+          </div>
 
           <div style={{ marginTop: 35 }} className='formule-actuelle'>
             ANNULER MON ABONNEMENT
