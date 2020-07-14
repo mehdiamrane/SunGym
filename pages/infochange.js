@@ -39,7 +39,7 @@ function Infochange({ token }) {
       const apiRes = await api.post('account/informations', data, {
         headers: { 'x-auth-token': token },
       });
-      if (apiRes){
+      if (apiRes) {
         cogoToast.success('Les informations ont bien été enregistrées', toastOptions);
         Router.push('/compte');
       }
