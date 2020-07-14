@@ -6,7 +6,7 @@ import api from 'helpers/api';
 import isUserLoggedIn from 'helpers/isUserLoggedIn';
 import cogoToast from 'cogo-toast';
 import toastOptions from 'helpers/toastOptions';
-import Router from 'next/router'
+import Router from 'next/router';
 
 function Infochange({ token }) {
   const [nom, setNom] = useState();
@@ -42,7 +42,7 @@ function Infochange({ token }) {
       if (apiRes) {
         cogoToast.success('Les informations ont bien été enregistrées', toastOptions);
         Router.push('/compte');
-    };
+      }
     } catch (err) {
       if (err.response.data.msg) cogoToast.error(err.response.data.msg, toastOptions);
     }
