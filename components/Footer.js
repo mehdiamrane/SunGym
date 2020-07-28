@@ -5,6 +5,11 @@ function Footer() {
     return (
         <div className='footer'>
             <div></div>
+            <div className='rgpd-zone'>
+                <Link href='/cgv' passHref><div>CGV</div></Link>
+                <Link href='/reglement' passHref><div>REGLEMENT INTERIEUR</div></Link>
+                <Link href='/rgpd' passHref><div>RGPD</div></Link>
+            </div>
             <div className='social-media'>
                 <div><img className='social-rounded' src='../fb1.png'></img></div>
                 <div><img className='social-rounded' src='../twit.png'></img></div>

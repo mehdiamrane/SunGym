@@ -25,25 +25,25 @@ function Compte({ user }) {
             <div style={{ marginBottom: 40 }} className='formule-actuelle'>
               Civilité
             </div>
-            <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>Nom : {user.nom}</div>
+            <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}><span style={{color:'yellow'}}>Nom :</span> {user.nom}</div>
             <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>
-              Prénom : {user.prenom}
+              <span style={{color:'yellow'}}>Prénom : </span> {user.prenom}
             </div>
           </div>
 
           <div style={{ marginBottom: 40, marginTop: 40 }}>
             <div className='formule-actuelle'>Adresse Physique et Electronique</div>
             <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>
-              Rue : {user.adresse || 'N/A'}
+            <span style={{color:'yellow'}}>Rue : </span>{user.adresse || 'N/A'}
             </div>
             <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>
-              Ville : {user.ville || 'N/A'}
+            <span style={{color:'yellow'}}>Ville : </span>{user.ville || 'N/A'}
             </div>
             <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>
-              Code postal : {user.codePostal || 'N/A'}
+            <span style={{color:'yellow'}}>Code postal :</span> {user.codePostal || 'N/A'}
             </div>
             <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>
-              Email : {user.email || 'N/A'}
+            <span style={{color:'yellow'}}>Email :</span> {user.email || 'N/A'}
             </div>
           </div>
 
