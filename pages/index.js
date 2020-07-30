@@ -21,7 +21,7 @@ export default function Home() {
       {/* Banniere prepa physique */}
       <div className='presentation-container'>
         <h2>PRESENTATION SUN GYM</h2>
-        <div className='logo-bg-trans' style={{display:'flex',backgroundImage:'url(../logo-trans.png)',backgroundSize:'cover',backgroundPosition:'center'}}>
+        <div className='logo-bg-trans'>
             <div className='presentation-left'>
               <p>Selon le principe de Lavoisier <i>« rien ne se perd, rien ne se crée, tout se transforme »</i>  SUN GYM rebat les cartes de l’activité physique, en prenant partie de communiquer sur les vérités physiologiques, plutôt que sur des mythes non vérifiés ou non vérifiables.</p>
               <h3>LE CONCEPT</h3>
@@ -91,6 +91,7 @@ export default function Home() {
 
 
       {/* TEA%M */}
+      <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100px',width:'100%',backgroundColor:'yellow',color:'black',fontWeight:'bold'}}><h2>NOTRE EQUIPE</h2></div>
       <div className='serge-card'>
           <div className='serge-left'></div>
           <div className='serge-right'>
