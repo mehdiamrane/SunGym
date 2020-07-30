@@ -19,9 +19,9 @@ function Tarifs() {
             29,90 $<span> / 28 jours</span>
           </div>
           <div className='formule-detail'>
-            <div className='detail-ligne'> - 10% si paiement en une fois</div>
-            <div className='detail-ligne'>Acces de 14H00 à 17H00 uniquement </div>
-            <div className='detail-ligne'>Accès illimité</div>
+            <div className='detail-ligne'><div className='losange-list'></div> - 10% si paiement en une fois</div>
+            <div className='detail-ligne'><div className='losange-list'></div>Acces de 14H00 à 17H00 uniquement </div>
+            <div className='detail-ligne'><div className='losange-list'></div>Accès illimité</div>
             <div className='detail-ligne'></div>
           </div>
           <Link href='/paiement' passHref>
@@ -35,9 +35,9 @@ function Tarifs() {
             39,90 $<span> / 28 jours</span>
           </div>
           <div className='formule-detail'>
-            <div className='detail-ligne'> - 10% si paiement en une fois</div>
-            <div className='detail-ligne'>Accès Libre de 7H00 à 17H00</div>
-            <div className='detail-ligne'>Accès illimité</div>
+            <div className='detail-ligne'><div className='losange-list'></div> - 10% si paiement en une fois</div>
+            <div className='detail-ligne'><div className='losange-list'></div>Accès Libre de 7H00 à 17H00</div>
+            <div className='detail-ligne'><div className='losange-list'></div>Accès illimité</div>
             <div className='detail-ligne'></div>
           </div>
           <Link href='/paiement' passHref>
@@ -51,9 +51,9 @@ function Tarifs() {
             54,90 $<span> / 28 jours</span>
           </div>
           <div className='formule-detail'>
-            <div className='detail-ligne'> - 10% si paiement en une fois</div>
-            <div className='detail-ligne'>Accès Libre de 7H00 à 22H00</div>
-            <div className='detail-ligne'>Accès illimité</div>
+            <div className='detail-ligne'><div className='losange-list'></div> - 10% si paiement en une fois</div>
+            <div className='detail-ligne'><div className='losange-list'></div>Accès Libre de 7H00 à 22H00</div>
+            <div className='detail-ligne'><div className='losange-list'></div>Accès illimité</div>
             <div className='detail-ligne'></div>
           </div>
           <Link href='/paiement' passHref>
@@ -67,9 +67,9 @@ function Tarifs() {
             29,90 $<span> / 28 jours</span>
           </div>
           <div className='formule-detail'>
-            <div className='detail-ligne'>- 10% si paiement en une fois</div>
-            <div className='detail-ligne'>Accès Libre de 7H00 à 22H00</div>
-            <div className='detail-ligne'>Uniquement Samedi et Dimanche</div>
+            <div className='detail-ligne'><div className='losange-list'></div>- 10% si paiement en une fois</div>
+            <div className='detail-ligne'><div className='losange-list'></div>Accès Libre de 7H00 à 22H00</div>
+            <div className='detail-ligne'><div className='losange-list'></div>Uniquement Samedi et Dimanche</div>
             <div className='detail-ligne'></div>
           </div>
           <Link href='/paiement' passHref>
@@ -83,11 +83,9 @@ function Tarifs() {
             39,90 $<span> / 28 jours</span>
           </div>
           <div className='formule-detail'>
-            <div className='detail-ligne'>- 10% si paiement en une fois</div>
-            <div className='detail-ligne'>Accès Libre de 7H00 à 22H00</div>
-            <div className='detail-ligne'>Acces illimité</div>
-            <div className='detail-ligne'>Uniquement sous présentation d'une carte étudiante</div>
-            <div className='detail-ligne'>Pas de paiement en ligne</div>
+            <div className='detail-ligne'><div className='losange-list'></div>- 10% si paiement en une fois</div>
+            <div className='detail-ligne'><div className='losange-list'></div>Accès Libre de 7H00 à 22H00</div>
+            <div className='detail-ligne'><div className='losange-list'></div>Acces illimité</div>
           </div>
           <Link href='/paiement' passHref>
             <a className='select-btn'>JE M'INSCRIS</a>
@@ -100,9 +98,9 @@ function Tarifs() {
             49,90 $<span> / 28 jours</span>
           </div>
           <div className='formule-detail'>
-            <div className='detail-ligne'>- 10% si paiement en une fois</div>
-            <div className='detail-ligne'>Accès Libre de 7H00 à 22H00</div>
-            <div className='detail-ligne'>Uniquement Septembre à fin Juin</div>
+            <div className='detail-ligne'><div className='losange-list'></div>- 10% si paiement en une fois</div>
+            <div className='detail-ligne'><div className='losange-list'></div>Accès Libre de 7H00 à 22H00</div>
+            <div className='detail-ligne'><div className='losange-list'></div>Uniquement Septembre à fin Juin</div>
             <div className='detail-ligne'></div>
           </div>
           <Link href='/paiement' passHref>

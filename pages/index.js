@@ -21,7 +21,7 @@ export default function Home() {
       {/* Banniere prepa physique */}
       <div className='presentation-container'>
         <h2>PRESENTATION SUN GYM</h2>
-        <div style={{display:'flex'}}>
+        <div style={{display:'flex',backgroundImage:'url(../logo-trans.png)',backgroundSize:'cover',backgroundPosition:'center'}}>
             <div className='presentation-left'>
               <p>Selon le principe de Lavoisier <i>« rien ne se perd, rien ne se crée, tout se transforme »</i>  SUN GYM rebat les cartes de l’activité physique, en prenant partie de communiquer sur les vérités physiologiques, plutôt que sur des mythes non vérifiés ou non vérifiables.</p>
               <h3>LE CONCEPT</h3>
@@ -42,20 +42,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='serge-card'>
-          <div className='serge-left'></div>
-          <div className='serge-right'>
-            <h3>DESSEL Serge</h3>
-            <span style={{fontWeight:'bold'}}>Coach Sportif - Consultant sport et bien être - Préparateur Physique</span>
-            <ul>
-              <li>Champion de France AFFBB 1992</li>
-              <li>Champion d'Europe NABBA 1996</li>
-              <li>Champion du monde toute catégories NABBA 1996</li>
-              <li>Mr Univers NABBA 1996</li>
-              <li>Professionnel IFBB PROLEAGUE 1998-2001</li>
-            </ul>
-          </div>
-        </div>
+      
       
       <div className='redirect-transformation-container'>
         <div className='transfo-img-home'></div>
@@ -67,8 +54,42 @@ export default function Home() {
           </Link>
         </div>
       </div>
+
+
+
+      {/* SENIOR */}
+      <div className='senior-container'>
+        <div className='senior-text-zone'>
+          <h2 style={{textTransform:'uppercase'}}>LE SPORT SANTé</h2>
+          <p>Sun Gym souhaite vous accompagner dans cette démarche sport & santé via différents services :</p>
+          <ul>
+            <li><div className='losange-list'></div>	Activité physique</li>
+            <li><div className='losange-list'></div>	Conseil nutritionnel</li>
+            <li><div className='losange-list'></div>	Activité physique</li>
+          </ul>
+          <Link href='/senior' passHref>
+            <div className='senior-btn'>En Savoir +</div>
+          </Link>
+        </div>
+      </div>
       
-      {/* Notre equipe*/}
+
+
+      {/* TEA%M */}
+      <div className='serge-card'>
+          <div className='serge-left'></div>
+          <div className='serge-right'>
+            <h3>DESSEL Serge</h3>
+            <span style={{fontWeight:'bold'}}>Coach Sportif - Consultant sport et bien être - Préparateur Physique</span>
+            <ul>
+              <li><div className='losange-list'></div>Champion de France AFFBB 1992</li>
+              <li><div className='losange-list'></div>Champion d'Europe NABBA 1996</li>
+              <li><div className='losange-list'></div>Champion du monde toute catégories NABBA 1996</li>
+              <li><div className='losange-list'></div>Mr Univers NABBA 1996</li>
+              <li><div className='losange-list'></div>Professionnel IFBB PROLEAGUE 1998-2001</li>
+            </ul>
+          </div>
+        </div>
       <div>
         
         <div className='vanina-card'></div>
