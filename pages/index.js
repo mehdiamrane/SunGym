@@ -21,7 +21,7 @@ export default function Home() {
       {/* Banniere prepa physique */}
       <div className='presentation-container'>
         <h2>PRESENTATION SUN GYM</h2>
-        <div style={{display:'flex',backgroundImage:'url(../logo-trans.png)',backgroundSize:'cover',backgroundPosition:'center'}}>
+        <div className='logo-bg-trans' style={{display:'flex',backgroundImage:'url(../logo-trans.png)',backgroundSize:'cover',backgroundPosition:'center'}}>
             <div className='presentation-left'>
               <p>Selon le principe de Lavoisier <i>« rien ne se perd, rien ne se crée, tout se transforme »</i>  SUN GYM rebat les cartes de l’activité physique, en prenant partie de communiquer sur les vérités physiologiques, plutôt que sur des mythes non vérifiés ou non vérifiables.</p>
               <h3>LE CONCEPT</h3>
@@ -71,6 +71,21 @@ export default function Home() {
             <div className='senior-btn'>En Savoir +</div>
           </Link>
         </div>
+      </div>
+
+
+      {/* FEMMES */}
+      <div className='woman-container'>
+        <div className='woman-index-img'></div>
+        <div className='woman-index-txt'>
+          <h2>POUR VOUS LES FEMMES</h2>
+          <p>Stop aux idées reçues, les femmes au « fitness » et les hommes à la musculation ! </p>
+          <p>Bouger c’est bien mais investir dans des efforts efficaces c’est mieux ! </p>
+          <Link href='/woman' passHref>
+            <div className='redirect-transfo-btn'>En Savoir +</div>
+          </Link>
+        </div>
+
       </div>
       
 

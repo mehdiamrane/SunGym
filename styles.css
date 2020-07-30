@@ -563,6 +563,32 @@ a:-webkit-any-link {
     height: 400px;
     background-size: cover;
 }
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .senior-text-zone{
+        width: 100%;
+    }
+
+  }
+
+  /*GALAXY NOTE 9*/
+@media only screen and (min-width: 414px) and (max-width: 767px){
+    .senior-text-zone{
+        width: 100%;
+    }
+    }
+
+    /* redmi note Xioamin 5_7 et samsung note 9*/
+@media only screen and (min-width: 393px) and (max-width: 767px) { 
+    .senior-text-zone{
+        width: 100%;
+    }
+   }
 
 
 
@@ -1406,6 +1432,9 @@ input:focus,textarea{
         text-align: justify;
         border: none;
     }
+    .logo-bg-trans{
+        background-image: url(../SunGym/public/logo-trans-small.png);
+    }
 
   }
 
@@ -1427,6 +1456,9 @@ input:focus,textarea{
         text-align: justify;
         border: none;
     }
+    .logo-bg-trans{
+        background-image: url(../SunGym/public/logo-trans-small.png);
+    }
     }
 
     /* redmi note Xioamin 5_7 et samsung note 9*/
@@ -1447,8 +1479,51 @@ input:focus,textarea{
         text-align: justify;
         border: none;
     }
+    .logo-bg-trans{
+        background-image: url(../SunGym/public/logo-trans-small.png);
+    }
    }
 
+
+
+   /* WOMAN */
+.woman-container{
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    display: flex;
+}
+.woman-index-img{
+    width: 50%;
+    height: 100%;
+    background-image: url(../SunGym/public/femmebanner.png);
+    background-size: cover;
+}
+.woman-index-txt{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.woman-page-banner{
+    width: 100%;
+    height: 400px;
+    background-image: url(../SunGym/public/womanbanner.jpg);
+    background-size: cover;
+}
+.woman-txt{
+    width: 80%;
+    margin-left: 10%;
+    color: black;
+    padding: 50px 0;
+}
+.woman-txt li{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
 
 
 
