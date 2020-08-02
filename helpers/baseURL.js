@@ -1,6 +1,6 @@
 let urls = {
-  test: `http://localhost:5000`,
-  development: 'https://sungym.herokuapp.com',
+  test: `http://localhost:3000`,
+  development: 'http://localhost:3000',
   production: 'https://sungym.herokuapp.com',
 };
 
