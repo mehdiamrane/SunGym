@@ -25,37 +25,43 @@ function Compte({ user }) {
             <div style={{ marginBottom: 40 }} className='formule-actuelle'>
               Civilité
             </div>
-            <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}><span style={{color:'yellow',marginRight:15}}>Nom :</span> {user.nom}</div>
             <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>
-              <span style={{color:'yellow',marginRight:15}}>Prénom : </span> {user.prenom}
+              <span style={{ color: 'yellow', marginRight: 15 }}>Nom :</span> {user.nom}
+            </div>
+            <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>
+              <span style={{ color: 'yellow', marginRight: 15 }}>Prénom : </span> {user.prenom}
             </div>
           </div>
 
           <div style={{ marginBottom: 40, marginTop: 40 }}>
             <div className='formule-actuelle'>Adresse Physique et Electronique</div>
             <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>
-            <span style={{color:'yellow',marginRight:15}}>Rue : </span>{user.adresse || 'N/A'}
+              <span style={{ color: 'yellow', marginRight: 15 }}>Rue : </span>
+              {user.adresse || 'N/A'}
             </div>
             <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>
-            <span style={{color:'yellow',marginRight:15}}>Ville : </span>{user.ville || 'N/A'}
+              <span style={{ color: 'yellow', marginRight: 15 }}>Ville : </span>
+              {user.ville || 'N/A'}
             </div>
             <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>
-            <span style={{color:'yellow',marginRight:15}}>Code postal :</span> {user.codePostal || 'N/A'}
+              <span style={{ color: 'yellow', marginRight: 15 }}>Code postal :</span>{' '}
+              {user.codePostal || 'N/A'}
             </div>
             <div style={{ display: 'flex', marginBottom: 10, marginTop: 10 }}>
-            <span style={{color:'yellow',marginRight:15}}>Email :</span> {user.email || 'N/A'}
+              <span style={{ color: 'yellow', marginRight: 15 }}>Email :</span>{' '}
+              {user.email || 'N/A'}
             </div>
           </div>
 
           <div className='formule-actuelle'>Gestion de mon compte</div>
           <div className='resp-btn' style={{ display: 'flex' }}>
-            <Link href='/abonnement'>
-              <button style={{ marginRight: 40 }} className='btn-select'>
+            <Link href='/abonnement' passHref>
+              <a style={{ marginRight: 40 }} className='btn-select'>
                 Informations Abonnement
-              </button>
+              </a>
             </Link>
             <Link href='/infochange'>
-              <button className='btn-select'>Modifier mes informations</button>
+              <a className='btn-select'>Modifier mes informations</a>
             </Link>
           </div>
         </div>

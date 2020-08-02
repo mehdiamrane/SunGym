@@ -22,21 +22,21 @@ function Navbar() {
         <ul className='navbar'>
           <div className='nav-left'>
             <div className='acceuil-logo'></div>
-            <Link passHref href='/'>
-              <li>
+            <li>
+              <Link href='/' passHref>
                 <a>Acceuil</a>
-              </li>
-            </Link>
-            <Link passHref href='/tarifs'>
-              <li>
+              </Link>
+            </li>
+            <li>
+              <Link href='/tarifs' passHref>
                 <a>Tarifs</a>
-              </li>
-            </Link>
-            <Link passHref href='/contact'>
-              <li>
+              </Link>
+            </li>
+            <li>
+              <Link href='/contact' passHref>
                 <a>Nous contacter</a>
-              </li>
-            </Link>
+              </Link>
+            </li>
           </div>
 
           <div className='nav-right'>
@@ -60,34 +60,36 @@ function Navbar() {
         <ul className='navbar'>
           <div className='nav-left'>
             <div className='acceuil-logo'></div>
-            <Link passHref href='/'>
-              <li>
+
+            <li>
+              <Link passHref href='/'>
                 <a>Acceuil</a>
-              </li>
-            </Link>
-            <Link passHref href='/tarifs'>
-              <li>
+              </Link>
+            </li>
+
+            <li>
+              <Link passHref href='/tarifs'>
                 <a>Tarifs</a>
-              </li>
-            </Link>
-            <Link passHref href='/contact'>
-              <li>
+              </Link>
+            </li>
+
+            <li>
+              <Link passHref href='/contact'>
                 <a>Nous contacter</a>
-              </li>
-            </Link>
+              </Link>
+            </li>
           </div>
 
           <div className='nav-right'>
-            <Link passHref href='/compte'>
-              <li>
+            <li>
+              <Link passHref href='/compte'>
                 <a>Mon Compte</a>
-              </li>
-            </Link>
-            <Link passHref href='/'>
-              <li onClick={logout}>
-                <a>Se Déconnecter</a>
-              </li>
-            </Link>
+              </Link>
+            </li>
+
+            <li onClick={logout}>
+              <a href='#'>Se Déconnecter</a>
+            </li>
           </div>
         </ul>
       </div>

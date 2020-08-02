@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Navbar from 'components/Navbar';
+import Footer from 'components/Footer';
 import api from 'helpers/api';
 import Router from 'next/router';
 import redirectTo from 'helpers/redirectTo';

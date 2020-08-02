@@ -70,8 +70,8 @@ function Login() {
             />
           </div>
 
-          <Link className='forgot-pw' href='/forgotpass' passHref>
-            <a>Mot de passe oublié ?</a>
+          <Link href='/forgotpass' passHref>
+            <a className='forgot-pw'>Mot de passe oublié ?</a>
           </Link>
 
           <input type='submit' className='subscribe-btn' value='SE CONNECTER' />
