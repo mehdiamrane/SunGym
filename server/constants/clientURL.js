@@ -1,7 +1,7 @@
 let urls = {
-  test: `http://localhost:3000`,
+  test: `http://localhost:3000/`,
   development: 'http://localhost:3000/',
-  production: 'https://your-front-production-url.com/',
+  production: 'https://sungym69.com/',
 };
 
 const clientURL = urls[process.env.NODE_ENV];

@@ -1,30 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Il s'agit d'un site de salle de sport qui propose des abonnements à ses clients.  
+Ceux-ci peuvent s'inscrire, payer en ligne, et gérer leurs informations personnelles et de facturation.
 
-## Getting Started
+## Lancer le serveur
 
-First, run the development server:
+- Installer les node modules avec `npm i`
+- Rentrer les secrets keys dans le fichier `.env`
+- Lancer le projet avec `npm run dev`
+- Ouvrir [http://localhost:3000](http://localhost:3000)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Informations sur le projet
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Des informations pratiques si besoin :
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Changer l'email de contact dans `server/constants/contactEmail.js`
+- Changer l'URL du front (pour les emails de reset password) dans `server/constants/clientURL.js`
+- Changer l'URL du back (pour les appels API) dans `helpers/baseURL.js`
+- Les tarifs sont stockés dans `data/plans.json`
+- Toutes les clés secrètes sont à mettre dans un fichier `.env` (voir `.env.exemple` pour la liste);
 
-## Learn More
+## En savoir plus
 
-To learn more about Next.js, take a look at the following resources:
+Ce projet a été réalisé avec les ressources suivantes :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Front-end codé avec [React.js](https://reactjs.org/) et [Next.js](https://nextjs.org/)
+- Back-end codé avec [Express.js](https://expressjs.com/fr/)
+- [MongoDB](https://www.mongodb.com/) comme base de données (via [Mongoose](https://mongoosejs.com/))
+- Paiements gérés avec [Stripe](https://stripe.com/)
+- Envois d'email avec [SendGrid](https://sendgrid.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Live sur O2switch
 
-## Deploy on Vercel
+Le projet est actuellement en déployé en live sur O2switch, vous pouvez le voir à l'adresse suivante : https://sungym69.com.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## TODOs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Une liste de choses à faire :
+
+- Gérer les webhooks stripe avec la business logic
+- Importer les tarifs de la page `/tarifs` depuis le fichier `data/plans.json`
+- Ajouter suppression de cartes bancaires
