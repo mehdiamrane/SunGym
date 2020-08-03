@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { createSubscription, listSubscriptions, listInvoices } = require('server/services/billing');
-const auth = require('server/api/middleware/auth');
+const { createSubscription, listSubscriptions, listInvoices } = require('@server/services/billing');
+const auth = require('@server/api/middleware/auth');
 
 /////////////////////////////////////////
 // Billing and Recurring Subscriptions //

@@ -1,5 +1,5 @@
-const stripe = require('server/app');
-const User = require('server/models/userModel');
+const stripe = require('@root/app.js');
+const User = require('@server/models/userModel');
 
 // Creates a SetupIntent used to save a credit card for later use
 async function createSetupIntent(userId) {

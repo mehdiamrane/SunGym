@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const User = require('server/models/userModel');
-const auth = require('server/api/middleware/auth');
-const { updateCustomer } = require('server/services/customers');
+const User = require('@server/models/userModel');
+const auth = require('@server/api/middleware/auth');
+const { updateCustomer } = require('@server/services/customers');
 
 //
 // Adds billing information to account for logged in user

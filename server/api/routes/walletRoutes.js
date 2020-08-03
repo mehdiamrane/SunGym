@@ -4,8 +4,8 @@ const {
   listPaymentMethods,
   getDefaultPaymentMethod,
   setDefaultPaymentMethod,
-} = require('server/services/customers');
-const auth = require('server/api/middleware/auth');
+} = require('@server/services/customers');
+const auth = require('@server/api/middleware/auth');
 
 ///////////////////////////////////////
 ///// Customers and Setup Intents /////

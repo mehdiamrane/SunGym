@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const User = require('server/models/userModel');
-const auth = require('server/api/middleware/auth');
-const clientURL = require('server/constants/clientURL');
-const contactEmail = require('server/constants/contactEmail');
+const User = require('@server/models/userModel');
+const auth = require('@server/api/middleware/auth');
+const clientURL = require('@server/constants/clientURL');
+const contactEmail = require('@server/constants/contactEmail');
 
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);

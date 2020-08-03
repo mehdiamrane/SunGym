@@ -1,4 +1,4 @@
-const stripe = require('server/app');
+const stripe = require('@root/app.js');
 // import { db } from './firebase';
 // import { firestore } from 'firebase-admin';
 

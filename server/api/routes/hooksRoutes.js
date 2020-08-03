@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { runAsync } = require('server/services/helpers');
-const { handleStripeWebhook } = require('server/services/webhooks');
+const { runAsync } = require('@server/services/helpers');
+const { handleStripeWebhook } = require('@server/services/webhooks');
 
 //////////////////////////////////
 ///// Handle Stripe webhooks /////

@@ -1,6 +1,6 @@
-const stripe = require('server/app');
-const { getOrCreateCustomer } = require('server/services/customers');
-const User = require('server/models/userModel');
+const stripe = require('@root/app.js');
+const { getOrCreateCustomer } = require('@server/services/customers');
+const User = require('@server/models/userModel');
 
 // Attaches a payment method to the Stripe customer,
 // subscribes to a Stripe plan

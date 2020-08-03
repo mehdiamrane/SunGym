@@ -3,11 +3,8 @@
 /////////////////////////
 require('module-alias/register');
 
-// Env variables from .env (disabled if in prod)
-const dotenv = require('dotenv');
-if (process.env.NODE_ENV !== 'production') {
-  dotenv.config();
-}
+// Env variables from .env
+require('dotenv').config();
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -60,12 +57,12 @@ app.prepare().then(() => {
   );
 
   // Set up routes
-  server.use('/users', require('server/api/routes/userRoutes'));
-  server.use('/wallet', require('server/api/routes/walletRoutes'));
-  server.use('/subscriptions', require('server/api/routes/subscriptionsRoutes'));
-  server.use('/hooks', require('server/api/routes/hooksRoutes'));
-  server.use('/account', require('server/api/routes/accountRoutes'));
-  server.use('/mail', require('server/api/routes/mailRoutes'));
+  server.use('/users', require('@server/api/routes/userRoutes'));
+  server.use('/wallet', require('@server/api/routes/walletRoutes'));
+  server.use('/subscriptions', require('@server/api/routes/subscriptionsRoutes'));
+  server.use('/hooks', require('@server/api/routes/hooksRoutes'));
+  server.use('/account', require('@server/api/routes/accountRoutes'));
+  server.use('/mail', require('@server/api/routes/mailRoutes'));
 
   server.all('*', (req, res) => {
     return handle(req, res);

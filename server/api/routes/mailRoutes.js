@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const contactEmail = require('server/constants/contactEmail');
+const contactEmail = require('@server/constants/contactEmail');
 
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);

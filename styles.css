@@ -12,7 +12,7 @@ body {
 
 /*ACCEUIL*/
 .container{
-    background-image: url(./public/banner.jpg);
+    background-image: url(/banner.jpg);
     background-size: cover;
     background-position: top;
     min-height: 102vh;
@@ -28,12 +28,12 @@ body {
 .acceuil-logo{
     width: 40px;
     height: 40px;
-    background-image: url(./public/logo.png);
+    background-image: url(/logo.png);
     background-size: cover;
 }
 
 .logo-main{
-    background-image: url(./public/logo-main.png);
+    background-image: url(/logo-main.png);
     background-size: cover;
     width: 500px;
     height: 510px;
@@ -259,7 +259,7 @@ body {
     background-color: white;
     display: flex;
     flex-direction: column;
-    background-image: url(./public/banner.jpg);
+    background-image: url(/banner.jpg);
     background-size: cover;
 }
 
@@ -510,7 +510,7 @@ a:-webkit-any-link {
 .senior-container{
     width: 100%;
     height: 400px;
-    background-image: url(../SunGym/public/oldbanner.jpg);
+    background-image: url(/oldbanner.jpg);
     background-size: cover;
     color: black;
 }
@@ -563,7 +563,7 @@ a:-webkit-any-link {
     margin: 15px 0;
 }
 .senior-page-banner{
-    background-image: url(../SunGym/public/senban.png);
+    background-image: url(/senban.png);
     width: 100%;
     height: 400px;
     background-size: cover;
@@ -611,7 +611,7 @@ a:-webkit-any-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./public/swarzy.jpg);
+    background-image: url(/swarzy.jpg);
     background-size: cover;
 }
 .btn-modif-abonnement{
@@ -639,7 +639,7 @@ a:-webkit-any-link {
           margin-bottom: 25px;
       }
       .account-page{
-          background-image: url(./public/swarzyMobile.jpg);
+          background-image: url(/swarzyMobile.jpg);
       }
       .account-page .abonnement-infos-container{
         margin-left: 0;
@@ -655,7 +655,7 @@ a:-webkit-any-link {
         margin-bottom: 25px;
     }
     .account-page{
-        background-image: url(./public/swarzyMobile.jpg);
+        background-image: url(/swarzyMobile.jpg);
     }
     .account-page .abonnement-infos-container{
         margin-left: 0;
@@ -670,7 +670,7 @@ a:-webkit-any-link {
         margin-bottom: 25px;
     }
     .account-page{
-        background-image: url(./public/swarzyMobile.jpg);
+        background-image: url(/swarzyMobile.jpg);
     }
 
     .account-page .abonnement-infos-container{
@@ -689,7 +689,7 @@ a:-webkit-any-link {
 .abonnement{
     width: 100%;
     min-height: 102vh;
-    background-image: url(./public/swarzy.jpg);
+    background-image: url(/swarzy.jpg);
     background-size: cover;
     background-position: right;
 }
@@ -749,7 +749,7 @@ a:-webkit-any-link {
     }
 
     .abonnement{
-        background-image: url(./public/swarzyMobile.jpg);
+        background-image: url(/swarzyMobile.jpg);
     }
     .paid-month-ligne div{
         margin-right: 10px;
@@ -764,7 +764,7 @@ a:-webkit-any-link {
         margin-top: 50px;
     }
     .abonnement{
-        background-image: url(./public/swarzyMobile.jpg);
+        background-image: url(/swarzyMobile.jpg);
     }
     .paid-month-ligne div{
         margin-right: 10px;
@@ -779,7 +779,7 @@ a:-webkit-any-link {
         margin-top: 50px;
     }
     .abonnement{
-        background-image: url(./public/swarzyMobile.jpg);
+        background-image: url(/swarzyMobile.jpg);
     }
     .paid-month-ligne div{
         margin-right: 10px;
@@ -810,7 +810,7 @@ a:-webkit-any-link {
 
 /*CONTACT*/
 .contact-page{
-    background-image: url(./public/man3.jpg);
+    background-image: url(/man3.jpg);
     background-position: right;
     background-size: cover;
     width: 100%;
@@ -1005,7 +1005,7 @@ input:focus,textarea{
 /*INFOS CHANGE PAGE*/
 .change-info-form-container{
     min-height: 102vh;
-    background-image: url(./public/swarzy.jpg);
+    background-image: url(/swarzy.jpg);
     background-size: cover;
     background-position: right;
 }
@@ -1042,7 +1042,7 @@ input:focus,textarea{
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
     .change-info-form-container{
-        background-image: url(./public/swarzyMobile.jpg);
+        background-image: url(/swarzyMobile.jpg);
     }
 
     .change-info-form-container .infos-form-container{
@@ -1062,7 +1062,7 @@ input:focus,textarea{
     /*GALAXY NOTE 9*/
 @media only screen and (min-width: 414px) and (max-width: 767px){
     .change-info-form-container{
-        background-image: url(./public/swarzyMobile.jpg);
+        background-image: url(/swarzyMobile.jpg);
     }
     .change-info-form-container .infos-form-container{
         width: 90%;
@@ -1081,7 +1081,7 @@ input:focus,textarea{
       /* redmi note Xioamin 5_7 et samsung note 9*/
 @media only screen and (min-width: 393px) and (max-width: 767px) { 
     .change-info-form-container{
-        background-image: url(./public/swarzyMobile.jpg);
+        background-image: url(/swarzyMobile.jpg);
     }
     .change-info-form-container .infos-form-container{
         width: 90%;
@@ -1128,7 +1128,7 @@ input:focus,textarea{
 .paiement-bg{
     width: 100%;
     min-height: 100vh;
-    background-image: url(./public/victor-freitas-WvDYdXDzkhs-unsplash.jpg);
+    background-image: url(/victor-freitas-WvDYdXDzkhs-unsplash.jpg);
     background-size: cover;
 }
 
@@ -1252,7 +1252,7 @@ input:focus,textarea{
 
 .transfo-img-home{
     background-color: black;
-    background-image: url(../SunGym/public/transfop.png);
+    background-image: url(/transfop.png);
     width: 50%;
     height: 100%;
     background-repeat: no-repeat;
@@ -1417,7 +1417,7 @@ input:focus,textarea{
 }
 .logo-bg-trans{
     display:flex;
-    background-image:url(../SunGym/public/logo-trans.png);
+    background-image:url(/logo-trans.png);
     background-size:cover;
     background-position:center;
 }
@@ -1446,7 +1446,7 @@ input:focus,textarea{
         border: none;
     }
     .logo-bg-trans{
-        background-image: url(../SunGym/public/logo-trans-small.png);
+        background-image: url(/logo-trans-small.png);
     }
 
   }
@@ -1470,7 +1470,7 @@ input:focus,textarea{
         border: none;
     }
     .logo-bg-trans{
-        background-image: url(../SunGym/public/logo-trans-small.png);
+        background-image: url(/logo-trans-small.png);
     }
     }
 
@@ -1493,7 +1493,7 @@ input:focus,textarea{
         border: none;
     }
     .logo-bg-trans{
-        background-image: url(../SunGym/public/logo-trans-small.png);
+        background-image: url(/logo-trans-small.png);
     }
    }
 
@@ -1509,7 +1509,7 @@ input:focus,textarea{
 .woman-index-img{
     width: 50%;
     height: 100%;
-    background-image: url(../SunGym/public/femmebanner.png);
+    background-image: url(/femmebanner.png);
     background-size: cover;
 }
 .woman-index-txt{
@@ -1523,7 +1523,7 @@ input:focus,textarea{
 .woman-page-banner{
     width: 100%;
     height: 400px;
-    background-image: url(../SunGym/public/womanbanner.jpg);
+    background-image: url(/womanbanner.jpg);
     background-size: cover;
 }
 .woman-txt{
@@ -1686,7 +1686,7 @@ input:focus,textarea{
     height: 500px;
     padding: 5px 0;
     display: flex;
-    background-image: url(./public/sergebanner.jpg);
+    background-image: url(/sergebanner.jpg);
     background-size: cover;
 }
 
