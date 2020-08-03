@@ -1,7 +1,7 @@
 let urls = {
   test: `http://localhost:3000`,
   development: 'http://localhost:3000',
-  production: 'https://sungym.netlify.app',
+  production: 'https://hellosungym.herokuapp.com',
 };
 
 const baseURL = urls[process.env.NODE_ENV];
