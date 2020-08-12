@@ -23,7 +23,7 @@ export default function Home() {
         <div className='logo-bg-trans'>
           <div className='presentation-left'>
             <p>
-              Selon le principe de Lavoisier{' '}
+              Selon le principe de Jean Michel{' '}
               <i>« rien ne se perd, rien ne se crée, tout se transforme »</i> SUN GYM rebat les
               cartes de l’activité physique, en prenant partie de communiquer sur les vérités
               physiologiques, plutôt que sur des mythes non vérifiés ou non vérifiables.
